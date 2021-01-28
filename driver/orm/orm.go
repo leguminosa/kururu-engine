@@ -25,7 +25,6 @@ func Open(dialect, connectionString string) (driver.OrmItf, error) {
 
 	db, err := gorm.Open(dialector(connectionString), &gorm.Config{
 		NamingStrategy: schema.NamingStrategy{
-			TablePrefix:   "pmb_",
 			SingularTable: true,
 		},
 	})
